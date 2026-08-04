@@ -1,0 +1,28 @@
+# Binarios do payload: vivem so no pendrive, nunca no repositorio
+USB/payload/**
+!USB/payload/**/LEIA-ME.txt
+
+# Saidas de execucao
+USB/Relatorios/
+*.log
+estado.json
+
+# Instaladores e imagens
+*.iso
+*.ISO
+*.msi
+*.exe
+*.cab
+*.wim
+
+# Configuracao real da organizacao (dominio, usuario, caminhos de rede).
+# Os .psd1 versionados sao exemplos; se voce mantiver os seus fora do repo,
+# descomente as linhas abaixo.
+# USB/config/deploy.psd1
+# USB/config/lab.psd1
+
+# Ferramentas de trabalho
+.claude/
+*.tmp
+Thumbs.db
+desktop.ini
