@@ -1,0 +1,407 @@
+﻿===============================================================================
+                     PENDRIVE DE PREPARACAO DE MAQUINAS
+                              TI
+===============================================================================
+
+O QUE E ISSO
+------------
+Um pendrive que faz sozinho o processo que hoje a gente faz na mao: limpar a
+maquina, instalar os programas padrao, por o antivirus e entrar no dominio.
+
+O que levava mais de uma hora clicando passa a levar cerca de 15 minutos
+sem ninguem olhando.
+
+
+COMO ABRIR
+----------
+Espete o pendrive, abra a pasta "Teste_Programa" e de DOIS CLIQUES em:
+
+        INICIAR.cmd
+
+Aceite o pedido de administrador. Vai abrir o menu.
+
+
+===============================================================================
+  O MENU
+===============================================================================
+
+   ADMINISTRATIVO  (dominio empresa.local)
+   ---------------------------------------------------------------
+     [1]  PREPARAR PC
+          PC novo, ou que acabou de ser restaurado.
+          Tira o Office 365, poe Office 2016, Chrome, Bitdefender
+          e entra no dominio.
+
+     [2]  RESTAURAR PC devolvido por funcionario
+          Confere os arquivos, avisa o que sera perdido e
+          RESTAURA a maquina. Pede confirmacao dupla.
+
+   LABORATORIOS  (dominio lab.local -- Lab 10, Lab 11)
+   ---------------------------------------------------------------
+     [3]  RESTAURAR PC de laboratorio
+          Troca de turma. RESTAURA a maquina. Confirmacao dupla.
+
+     [4]  PREPARAR PC de laboratorio
+          PC de lab JA restaurado. SEM Office.
+          Tira o Office 365, poe Chrome, Bitdefender e entra
+          no lab.local.
+
+   OUTROS
+   ---------------------------------------------------------------
+     [5]  Instalar / reparar SO o Bitdefender
+          (tira o McAfee de fabrica antes)
+     [6]  Abrir o manual
+
+   FERRAMENTAS
+   ---------------------------------------------------------------
+     [7]  DIAGNOSTICO desta maquina
+          So LE a maquina, nao muda nada. Mostra o que ja tem,
+          o que falta, e diz qual opcao voce deve usar.
+          Na duvida sobre qualquer maquina: comece por aqui.
+
+     [8]  Tarefas avulsas
+          Fazer UMA coisa so, sem rodar o processo inteiro:
+          limpar o 365, instalar o Office, ativar a licenca,
+          instalar o Chrome, entrar ou SAIR do dominio, etc.
+
+     [9]  Modo LOTE
+          Para uma pilha de notebooks. Escolhe o perfil uma vez
+          e vai repetindo maquina a maquina, guardando um
+          relatorio de cada uma.
+
+     [S]  Modo SIMULACAO (liga/desliga)
+          Mostra tudo que o kit FARIA, sem mexer em nada.
+          Use para testar numa maquina de verdade sem risco.
+
+     [0]  Sair
+
+
+COMO ESCOLHER A OPCAO CERTA
+---------------------------
+
+   Chegou notebook novo?  ..................... opcao [1]
+
+   Funcionario saiu e devolveu o notebook?  ... opcao [2], depois a [1]
+
+   Trocou a turma do laboratorio?  ............ opcao [3], depois a [4]
+
+   PC de lab ja restaurado, falta preparar? ... opcao [4]
+
+   So o antivirus esta faltando/quebrado?  .... opcao [5]
+
+   Nao sei o que essa maquina tem? ........... opcao [7]
+
+   Preciso so de UMA coisa (Office, Chrome,
+   dominio, licenca)? ........................ opcao [8]
+
+   Tenho 10 notebooks para fazer hoje? ....... opcao [9]
+
+   O Office 2016 nao instala de jeito nenhum?  opcao [8] > [1]
+      (limpeza profunda do 365 -- ver secao
+       "QUANDO O OFFICE 2016 NAO INSTALA")
+
+REGRA GERAL:
+   As opcoes VERDES ([1] e [4]) preparam a maquina.
+   As opcoes VERMELHAS ([2] e [3]) APAGAM a maquina.
+   Depois de apagar, sempre roda uma opcao verde.
+
+
+===============================================================================
+  ANTES DE COMECAR - CONFIRA
+===============================================================================
+
+   [ ] Maquina LIGADA NA TOMADA (o processo demora, nao pode desligar)
+   [ ] Maquina na REDE DA EMPRESA (cabo ou Wi-Fi corporativo)
+       -> sem rede nao entra no dominio
+   [ ] Pelo menos 15 GB livres no disco
+   [ ] Voce tem em maos o usuario e senha de dominio
+
+
+===============================================================================
+  OPCAO [1] e [4]  -  PREPARAR A MAQUINA
+===============================================================================
+
+   1. Abra o INICIAR.cmd e escolha 1 (administrativo) ou 4 (laboratorio)
+
+   2. Ele mostra os dados da maquina e o que vai fazer.
+      Confira e digite S.
+
+   3. Ele pergunta o nome do computador:
+
+      Opcao [1] - administrativo:
+         Digite so o sufixo. Ex.: 014  ->  fica NB-014
+
+      Opcao [4] - laboratorio:
+         Digite o numero do lab e o numero da maquina.
+         Ex.: lab 10, maquina 7  ->  fica LAB10-07
+
+      (ENTER em branco mantem o nome atual)
+
+   4. Vai abrir a janela de senha do Windows, com o usuario ja preenchido.
+      Digite so a senha.
+
+      >> A senha NAO fica gravada em lugar nenhum.
+
+   5. Pode sair de perto. Daqui pra frente e automatico:
+
+        - remove o Microsoft 365 que veio de fabrica
+        - remove bloatware (Candy Crush, Xbox, Spotify, etc.)
+        - instala o Google Chrome
+        - instala o Office 2016          <- SO na opcao [1]
+        - instala o Bitdefender          <- nas duas
+        - ajusta energia, fuso e Explorer
+        - entra no dominio
+
+   6. No final aparece a CONFERENCIA:
+
+        Chrome        : OK
+        Office 2016   : OK          (ou "nao faz parte deste perfil")
+        Microsoft 365 : removido
+        Bitdefender   : OK
+        Dominio       : empresa.local
+
+   7. Reinicia sozinho em 60 segundos.
+      (aperte qualquer tecla para cancelar o reinicio)
+
+
+===============================================================================
+  OPCAO [2] e [3]  -  RESTAURAR (APAGA TUDO)
+===============================================================================
+
+   ATENCAO: essas opcoes deixam a maquina zerada. Nao tem volta.
+
+   1. Abra o INICIAR.cmd e escolha 2 (funcionario) ou 3 (laboratorio)
+
+   2. O menu ja pergunta "isso vai RESTAURAR a maquina, continuar?"
+
+   3. Ele mostra na tela:
+
+        - Nome da maquina no AD  ....... ANOTE
+        - Numero de serie  ............. ANOTE
+        - Se tem BitLocker ligado  ..... e a chave de recuperacao
+        - Lista de arquivos que sobraram nas pastas pessoais
+
+   4. LEIA A LISTA DE ARQUIVOS COM ATENCAO.
+      Tudo isso vai ser APAGADO. Se tiver algo que precisa ser
+      guardado, copie AGORA, antes de continuar.
+
+      >> Se aparecer "SEM PERMISSAO DE LEITURA" em algum perfil, o
+         script NAO conseguiu olhar aquela pasta. NAO continue antes
+         de abrir a pasta na mao pelo Explorer e conferir.
+
+   5. TRAVA 1: ele pede para voce digitar o NOME DA MAQUINA.
+      Se errar, cancela e nada acontece.
+
+   6. TRAVA 2: ele pede para voce digitar a palavra RESTAURAR
+      em maiusculas. Se errar, cancela e nada acontece.
+
+   7. Abre a tela de Redefinir do Windows. Escolha:
+
+        -> Remover tudo
+        -> Reinstalacao local          (mais rapido que baixar da nuvem)
+        -> Alterar configuracoes  ->  Dados: Nao
+                                      Apps pre-instalados: Nao
+
+      Essa ultima evita o bloatware voltar.
+
+   8. Espere terminar (demora bastante).
+
+   9. Terminado:
+        veio de funcionario   -> rode a opcao [1]
+        veio de laboratorio   -> rode a opcao [4]
+
+  10. NO SERVIDOR: remova do Active Directory o objeto da maquina
+      cujo nome voce anotou no passo 3.
+
+
+===============================================================================
+  QUANDO O OFFICE 2016 NAO INSTALA
+===============================================================================
+
+Esse e o problema que mais da trabalho, e tem uma causa so.
+
+O Office 2016 se RECUSA a instalar se sobrar qualquer pedaco do
+Microsoft 365 na maquina. E nao basta desinstalar o 365 pelo caminho
+normal: ele deixa para tras servico, chaves de registro e pacotes da
+Store que o instalador do 2016 enxerga e reclama.
+
+E por isso que, tentando na mao, aparece UM ERRO DIFERENTE A CADA
+TENTATIVA: cada rodada tira um pedaco diferente e o setup reclama do
+que sobrou. Nao e azar nem maquina ruim.
+
+O QUE FAZER:
+
+   1. Opcao [7] (diagnostico). Ele mostra a linha:
+
+          Pode instalar : NAO -- limpe o 365 antes
+
+      e lista exatamente quais residuos estao bloqueando.
+
+   2. Opcao [8] > [1] "Limpeza profunda do Microsoft 365".
+      Usa as ferramentas oficiais da Microsoft, em camadas, e
+      confere o resultado no fim.
+
+   3. Se pedir para reiniciar, REINICIE. Reinicializacao pendente
+      tambem trava o setup do Office.
+
+   4. Opcao [8] > [2] para instalar o Office.
+
+As opcoes [1] e [4] ja fazem tudo isso sozinhas, na ordem certa.
+As avulsas servem para quando so falta essa parte.
+
+IMPORTANTE: o kit nunca apaga a pasta do Office na marra. Isso
+quebraria justamente o Office 2016 que queremos instalar. Se as
+ferramentas oficiais nao resolverem, ele avisa em vez de improvisar.
+
+
+===============================================================================
+  SOBRE A LICENCA DO OFFICE
+===============================================================================
+
+A licenca da organizacao e KMS. Isso quer dizer que a maquina precisa
+ENXERGAR O SERVIDOR KMS DA REDE para ativar o Office.
+
+Consequencia pratica: um notebook preparado fora da rede da empresa
+instala o Office, mas fica em "periodo de carencia" e um dia comeca
+a reclamar de ativacao.
+
+Depois de por o notebook na rede, use a opcao [8] > [3] para
+verificar e ativar. O diagnostico [7] tambem mostra o estado da
+licenca em toda maquina que voce olhar.
+
+
+===============================================================================
+  SOBRE O ANTIVIRUS
+===============================================================================
+
+Todas as opcoes de preparar ([1] e [4]) instalam o Bitdefender.
+
+ANTES DE INSTALAR, o kit tira o McAfee que vem de FABRICA nos notebooks
+novos. Isso e feito em tres partes, porque so desinstalar nao resolve:
+
+   1. desinstala o McAfee, usando o desinstalador do proprio McAfee
+   2. tira o pacote de dentro da IMAGEM do Windows -- e ELE que faz o
+      McAfee se reinstalar sozinho toda vez que a maquina e formatada
+   3. tira a tarefa agendada que o McAfee deixa rodando
+
+Se o McAfee ja voltou depois de uma formatacao, e porque o passo 2
+nao tinha sido feito. Rode a opcao [5], que faz essa limpeza tambem.
+
+Depois disso, o PROPRIO instalador do Bitdefender ainda desinstala
+qualquer antivirus concorrente que tenha sobrado (Avast, Norton, etc.),
+pela ferramenta oficial de cada fabricante, que e o jeito seguro.
+
+Se no final da conferencia aparecer:
+
+     Outro antivirus: AINDA PRESENTE - <nome>
+
+entao aquele antivirus resistiu. Remova na mao pelo painel do fabricante
+e depois rode a opcao [5] para reinstalar o Bitdefender.
+
+O pendrive tem os DOIS instaladores:
+   - kit offline (611 MB) -> usado por padrao, nao precisa de internet
+   - downloader (4 MB)    -> reserva, baixa ~600 MB da internet
+
+A instalacao do Bitdefender demora de 10 a 30 minutos e deixa a maquina
+lenta enquanto roda. E normal.
+
+
+===============================================================================
+  SE DER ERRO
+===============================================================================
+
+REGRA DE OURO: pode rodar o pendrive de novo quantas vezes quiser.
+Ele PULA o que ja deu certo e retoma de onde parou.
+
+
+"O dominio ... nao resolve por DNS"
+   A maquina nao esta na rede da empresa, ou pegou o DNS errado.
+   Confira o cabo / Wi-Fi. Se estiver no Wi-Fi de visitante, troque.
+
+"Sem acesso a \\servidor-arquivos\Publico"
+   O usuario digitado nao tem permissao de leitura na pasta.
+   (mas o Office e o Bitdefender ja estao no pendrive, entao
+    normalmente nem precisa da rede para isso)
+
+"Microsoft 365: AINDA PRESENTE" na conferencia
+   Uma versao que resistiu. Remova por Configuracoes > Aplicativos
+   e rode o pendrive de novo.
+
+"Bitdefender: NAO INSTALADO" na conferencia
+   Rode a opcao [5]. Se insistir, olhe o log.
+
+O Office pede ativacao depois de instalar
+   A chave nao foi lida. Ative na mao com a chave que esta em
+   \\servidor-arquivos\Publico\TI\Softwares\Office 2016\
+
+Travou / fechou no meio
+   Rode de novo. Ele retoma. Se insistir, olhe o log.
+
+
+ONDE FICAM OS LOGS
+------------------
+        C:\WinDeployKit\Logs\
+
+Cada execucao gera um arquivo com data e hora. Para pedir ajuda,
+mande esse arquivo.
+
+
+===============================================================================
+  O QUE O PENDRIVE **NAO** FAZ
+===============================================================================
+
+   - Nao formata o disco sozinho.
+     Quem apaga e o "Redefinir" do proprio Windows, e voce confirma
+     nas telas dele.
+
+   - Nao instala driver de fabricante.
+     Se faltar driver, use o site da Dell/HP/Lenovo normalmente.
+
+   - Nao cria o usuario do funcionario no AD.
+     Isso continua sendo feito no servidor, na mao.
+
+   - Nao remove a maquina antiga do Active Directory.
+     Ele so te avisa o nome para voce remover no servidor.
+
+   - Nao define o Chrome como navegador padrao.
+     O Windows 11 nao deixa por script. Tem que ser por politica
+     de grupo (GPO) ou na mao nas Configuracoes.
+
+
+===============================================================================
+  DUVIDAS FREQUENTES
+===============================================================================
+
+P: Posso usar em PC de mesa tambem?
+R: Pode. O script nao diferencia notebook de desktop.
+
+P: E se eu rodar a opcao 1 duas vezes?
+R: Sem problema. Ele detecta o que ja foi feito e pula.
+
+P: Preciso de internet?
+R: Nao para o Office nem para o Bitdefender (estao no pendrive).
+   Precisa da REDE DA EMPRESA para entrar no dominio.
+
+P: A senha de dominio fica salva no pendrive?
+R: Nao. E digitada na janela do Windows, usada na hora e descartada.
+   Nao vai para arquivo nem para log.
+
+P: Escolhi a opcao [2] sem querer. E agora?
+R: Calma. Ele so apaga depois de voce digitar o nome da maquina E a
+   palavra RESTAURAR. Basta apertar ENTER em branco que cancela.
+
+P: Onde eu mudo o dominio, o nome padrao das maquinas, etc.?
+R: Nos arquivos da pasta config do pendrive:
+        config\deploy.psd1  ->  maquinas administrativas
+        config\lab.psd1     ->  maquinas de laboratorio
+   Sao os unicos arquivos que precisam ser editados.
+   Nao mexa nos scripts.
+
+P: Posso interromper no meio?
+R: Pode, mas evite durante a instalacao do Office ou do Bitdefender.
+   Se interromper, rode de novo que ele retoma.
+
+
+===============================================================================
+  Duvida que este manual nao responde? Fale com o setor de TI.
+===============================================================================
