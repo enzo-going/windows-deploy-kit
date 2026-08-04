@@ -1,5 +1,7 @@
-# Binarios do payload: vivem so no pendrive, nunca no repositorio
+# Binarios do payload: vivem so no pendrive, nunca no repositorio.
+# So os LEIA-ME de cada pasta ficam versionados.
 USB/payload/**
+!USB/payload/**/
 !USB/payload/**/LEIA-ME.txt
 
 # Saidas de execucao

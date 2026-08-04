@@ -1,0 +1,26 @@
+﻿ISO DO OFFICE 2016
+==================
+
+Coloque aqui a ISO do Office 2016:
+
+    SW_DVD5_Office_2016_64Bit_Brazilian_MLF_X20-42468.ISO
+
+Ela esta em:
+
+    \\servidor-arquivos\Publico\TI\Softwares\Office 2016\
+    (caminho configurado em USB\config\deploy.psd1 -> PastaOffice2016)
+
+Com a ISO nesta pasta, o Office instala direto do pendrive: nao precisa
+copiar 800 MB pela rede e funciona mesmo se o notebook ainda nao estiver
+conectado.
+
+Sem a ISO aqui, o script busca na rede automaticamente (ai precisa da
+credencial de dominio e da maquina estar na rede da empresa).
+
+Onde o script procura, nesta ordem:
+   1. esta pasta        (payload\office)
+   2. raiz do pendrive
+   3. a pasta Publico na rede
+
+ATENCAO: pendrive em FAT32 nao aceita arquivo maior que 4 GB. A ISO do
+Office tem ~800 MB, entao cabe sem problema.

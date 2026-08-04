@@ -1,0 +1,41 @@
+﻿PASTA DE INSTALADORES OFFLINE
+=============================
+
+Coloque aqui os instaladores que devem ser aplicados no notebook novo.
+Com eles presentes, o deploy funciona sem depender de internet.
+
+O nome do arquivo tem que bater com o campo "Arquivo" do config\deploy.psd1.
+
+Arquivos .MSI
+-------------
+Instalados automaticamente com:
+    msiexec /i <arquivo> /qn /norestart REBOOT=ReallySuppress
+
+Nada mais e necessario.
+
+Arquivos .EXE
+-------------
+Crie um arquivo ao lado com o mesmo nome + ".args" contendo os parametros
+de instalacao silenciosa.
+
+Exemplo -- para AcroRdrDC.exe, crie AcroRdrDC.exe.args com o conteudo:
+    /sAll /rs /msi EULA_ACCEPT=YES
+
+Sem o .args o instalador e pulado (para nao travar o deploy esperando um
+clique que ninguem vai dar).
+
+Onde baixar
+-----------
+Chrome Enterprise (MSI)
+    https://chromeenterprise.google/browser/download/
+    -> salve como GoogleChromeEnterprise64.msi
+
+7-Zip
+    https://www.7-zip.org/download.html  (pegue o .msi x64)
+    -> salve como 7z-x64.msi
+
+Adobe Acrobat Reader (instalador corporativo)
+    https://get.adobe.com/br/reader/enterprise/
+
+Ou simplesmente rode o Preparar-Pendrive.ps1, que baixa Chrome e 7-Zip
+sozinho.
