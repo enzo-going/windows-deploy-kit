@@ -1,5 +1,7 @@
 # WinDeployKit
 
+[![lint](https://github.com/enzo-going/windows-deploy-kit/actions/workflows/lint.yml/badge.svg)](https://github.com/enzo-going/windows-deploy-kit/actions/workflows/lint.yml)
+
 Pendrive que prepara e restaura máquinas Windows sem acompanhamento. Substitui um
 processo manual de mais de uma hora por máquina: tirar o Microsoft 365 de fábrica,
 instalar Office 2016 VL, Chrome e antivírus, remover bloatware, aplicar ajustes e
