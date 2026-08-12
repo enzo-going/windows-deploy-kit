@@ -24,7 +24,6 @@ estado.json
 # USB/config/lab.psd1
 
 # Ferramentas de trabalho
-.claude/
 *.tmp
 Thumbs.db
 desktop.ini
